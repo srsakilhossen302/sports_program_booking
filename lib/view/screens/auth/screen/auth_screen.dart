@@ -85,7 +85,7 @@ class AuthScreen extends StatelessWidget {
                         style: TextStyle(color: Colors.white70),
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () => Get.toNamed(AppRoute.signIn),
                         child: const Text(
                           "Log in",
                           style: TextStyle(

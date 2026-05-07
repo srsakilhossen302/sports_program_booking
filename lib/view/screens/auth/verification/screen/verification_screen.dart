@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
+import '../../../../../core/app_route.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 import '../controller/verification_controller.dart';
@@ -167,7 +168,9 @@ class VerificationScreen extends StatelessWidget {
                               width: double.infinity,
                               height: 60.h,
                               child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                    
+                                },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: const Color(0xFF0A1020),
                                   foregroundColor: Colors.white,
