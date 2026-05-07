@@ -40,13 +40,6 @@ class SignUpScreen extends StatelessWidget {
                             decoration: BoxDecoration(
                               color: const Color(0xFF1E2737),
                               borderRadius: BorderRadius.circular(30.r),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.1),
-                                  blurRadius: 10,
-                                  offset: const Offset(0, 4),
-                                ),
-                              ],
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
@@ -84,13 +77,6 @@ class SignUpScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(40.r),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.05),
-                              blurRadius: 20,
-                              offset: const Offset(0, 10),
-                            ),
-                          ],
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,7 +89,6 @@ class SignUpScreen extends StatelessWidget {
                               decoration: const BoxDecoration(
                                 borderRadius: BorderRadius.all(Radius.circular(16)),
                                 color: Color(0xFF0F172A),
-                                // shape: BoxShape.circle,
                               ),
                               padding: EdgeInsets.all(12.r),
                               child: SvgPicture.asset(AppIcons.appLogo),
@@ -218,37 +203,46 @@ class SignUpScreen extends StatelessWidget {
                             ),
                             SizedBox(height: 40.h),
                             
-                            // Continue Button
-                            SizedBox(
-                              width: double.infinity,
-                              height: 60.h,
-                              child: ElevatedButton(
-                                onPressed: () => Get.toNamed(AppRoute.verification),
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color(0xFFF1F5F9),
-                                  foregroundColor: const Color(0xFF94A3B8),
-                                  elevation: 0,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30.r),
+                            // Continue Button (Reactive Color)
+                            Obx(() {
+                              final bool isFilled = controller.isAllFieldsFilled.value;
+                              return SizedBox(
+                                width: double.infinity,
+                                height: 60.h,
+                                child: ElevatedButton(
+                                  onPressed: isFilled ? () => Get.toNamed(AppRoute.verification) : null,
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: isFilled ? const Color(0xFF0A1020) : const Color(0xFFF1F5F9),
+                                    foregroundColor: isFilled ? Colors.white : const Color(0xFF94A3B8),
+                                    elevation: 0,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(30.r),
+                                    ),
+                                    disabledBackgroundColor: const Color(0xFFF1F5F9),
+                                    disabledForegroundColor: const Color(0xFF94A3B8),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "CONTINUE",
+                                        style: TextStyle(
+                                          fontSize: 14.sp,
+                                          fontWeight: FontWeight.w900,
+                                          letterSpacing: 2.5,
+                                        ),
+                                      ),
+                                      SizedBox(width: 12.w),
+                                      Icon(
+                                        Icons.arrow_forward_rounded, 
+                                        size: 22.sp, 
+                                        color: isFilled ? Colors.white : Colors.grey.shade400
+                                      ),
+                                    ],
                                   ),
                                 ),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "CONTINUE",
-                                      style: TextStyle(
-                                        fontSize: 14.sp,
-                                        fontWeight: FontWeight.w900,
-                                        letterSpacing: 2.5,
-                                      ),
-                                    ),
-                                    SizedBox(width: 12.w),
-                                    Icon(Icons.arrow_forward_rounded, size: 22.sp, color: Colors.grey.shade400),
-                                  ],
-                                ),
-                              ),
-                            ),
+                              );
+                            }),
                           ],
                         ),
                       ),
