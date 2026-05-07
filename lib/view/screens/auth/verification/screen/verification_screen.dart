@@ -169,7 +169,7 @@ class VerificationScreen extends StatelessWidget {
                               height: 60.h,
                               child: ElevatedButton(
                                 onPressed: () {
-                                    
+                                    Get.toNamed(AppRoute.roleSelection);
                                 },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: const Color(0xFF0A1020),
