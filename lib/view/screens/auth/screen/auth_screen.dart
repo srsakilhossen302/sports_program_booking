@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import '../../../../core/app_route.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_icons.dart';
 import '../controller/auth_controller.dart';
@@ -68,7 +69,7 @@ class AuthScreen extends StatelessWidget {
                   _socialButton(
                     icon: const Icon(Icons.alternate_email_rounded, color: Colors.white, size: 24),
                     label: "Sign Up with Email",
-                    onPressed: () {},
+                    onPressed: () => Get.toNamed(AppRoute.signUp),
                     backgroundColor: const Color(0xFF343D4D),
                     textColor: Colors.white,
                   ),
