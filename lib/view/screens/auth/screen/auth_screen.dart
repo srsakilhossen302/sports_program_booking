@@ -8,7 +8,6 @@ class AuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<AuthController>(
-      init: AuthController(),
       builder: (controller) {
         return const Scaffold(
           body: Center(

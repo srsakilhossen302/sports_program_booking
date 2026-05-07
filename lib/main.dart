@@ -5,7 +5,6 @@ import 'core/dependency.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  DependencyInjection().dependencies();
   runApp(const MyApp());
 }
 
@@ -19,6 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Smart Sports Booking',
       initialRoute: AppRoute.splash,
       getPages: AppRoute.routes,
+      initialBinding: DependencyInjection(),
     );
   }
 }

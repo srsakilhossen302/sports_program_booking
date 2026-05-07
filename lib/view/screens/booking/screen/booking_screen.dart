@@ -8,7 +8,6 @@ class BookingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<BookingController>(
-      init: BookingController(),
       builder: (controller) {
         return const Scaffold(
           body: Center(
