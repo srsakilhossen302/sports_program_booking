@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../../core/utils/app_colors.dart';
 import '../controller/booking_controller.dart';
 
 class BookingScreen extends StatelessWidget {
@@ -9,9 +10,19 @@ class BookingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<BookingController>(
       builder: (controller) {
-        return const Scaffold(
-          body: Center(
-            child: Text('Booking Screen'),
+        return Scaffold(
+          body: Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: const BoxDecoration(
+              gradient: AppColors.splashGradient,
+            ),
+            child: const Center(
+              child: Text(
+                'Booking Screen',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
           ),
         );
       },
