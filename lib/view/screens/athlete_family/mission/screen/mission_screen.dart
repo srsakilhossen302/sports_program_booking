@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../../../../core/app_route.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../controller/mission_controller.dart';
 
@@ -180,7 +181,7 @@ class MissionScreen extends StatelessWidget {
                               height: 64.h,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  // Navigate to Step 4 (Review)
+                                  Get.toNamed(AppRoute.review);
                                 },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.white,
