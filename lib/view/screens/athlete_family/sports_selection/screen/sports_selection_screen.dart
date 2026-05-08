@@ -66,7 +66,7 @@ class SportsSelectionScreen extends StatelessWidget {
                               color: Colors.white.withOpacity(0.4),
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w800,
-                              letterSpacing: 2.0,
+                              letterSpacing: 4.0,
                             ),
                           ),
                         ],

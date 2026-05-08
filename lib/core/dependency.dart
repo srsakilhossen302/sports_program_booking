@@ -8,6 +8,7 @@ import '../view/screens/auth/verification/controller/verification_controller.dar
 import '../view/screens/auth/role_selection/controller/role_selection_controller.dart';
 import '../view/screens/athlete_family/sports_selection/controller/sports_selection_controller.dart';
 import '../view/screens/athlete_family/identity/controller/identity_controller.dart';
+import '../view/screens/athlete_family/mission/controller/mission_controller.dart';
 import '../view/screens/booking/controller/booking_controller.dart';
 
 class DependencyInjection extends Bindings {
@@ -22,6 +23,7 @@ class DependencyInjection extends Bindings {
     Get.lazyPut(() => RoleSelectionController(), fenix: true);
     Get.lazyPut(() => SportsSelectionController(), fenix: true);
     Get.lazyPut(() => IdentityController(), fenix: true);
+    Get.lazyPut(() => MissionController(), fenix: true);
     Get.lazyPut(() => BookingController(), fenix: true);
   }
 }

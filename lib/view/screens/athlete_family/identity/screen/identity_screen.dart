@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../../../../core/app_route.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 import '../controller/identity_controller.dart';
@@ -65,7 +66,7 @@ class IdentityScreen extends StatelessWidget {
                               color: Colors.white.withOpacity(0.4),
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w800,
-                              letterSpacing: 2.0,
+                              letterSpacing: 4.0,
                             ),
                           ),
                         ],
@@ -239,7 +240,7 @@ class IdentityScreen extends StatelessWidget {
                               height: 64.h,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  // Navigate to Step 3
+                                  Get.toNamed(AppRoute.mission);
                                 },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.white,

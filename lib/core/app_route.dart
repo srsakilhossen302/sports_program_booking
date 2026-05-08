@@ -7,6 +7,7 @@ import '../view/screens/auth/verification/screen/verification_screen.dart';
 import '../view/screens/auth/role_selection/screen/role_selection_screen.dart';
 import '../view/screens/athlete_family/sports_selection/screen/sports_selection_screen.dart';
 import '../view/screens/athlete_family/identity/screen/identity_screen.dart';
+import '../view/screens/athlete_family/mission/screen/mission_screen.dart';
 
 class AppRoute {
   static const String splash = '/splash';
@@ -17,6 +18,7 @@ class AppRoute {
   static const String roleSelection = '/role_selection';
   static const String sportsSelection = '/sports_selection';
   static const String identity = '/identity';
+  static const String mission = '/mission';
   static const String booking = '/booking';
 
   static List<GetPage> routes = [
@@ -28,5 +30,6 @@ class AppRoute {
     GetPage(name: roleSelection, page: () => const RoleSelectionScreen()),
     GetPage(name: sportsSelection, page: () => const SportsSelectionScreen()),
     GetPage(name: identity, page: () => const IdentityScreen()),
+    GetPage(name: mission, page: () => const MissionScreen()),
   ];
 }
