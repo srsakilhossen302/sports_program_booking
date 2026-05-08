@@ -5,6 +5,7 @@ import '../view/screens/auth/sign_up/screen/sign_up_screen.dart';
 import '../view/screens/auth/sign_in/screen/sign_in_screen.dart';
 import '../view/screens/auth/verification/screen/verification_screen.dart';
 import '../view/screens/auth/role_selection/screen/role_selection_screen.dart';
+import '../view/screens/auth/sports_selection/screen/sports_selection_screen.dart';
 
 class AppRoute {
   static const String splash = '/splash';
@@ -13,6 +14,7 @@ class AppRoute {
   static const String signIn = '/sign_in';
   static const String verification = '/verification';
   static const String roleSelection = '/role_selection';
+  static const String sportsSelection = '/sports_selection';
   static const String booking = '/booking';
 
   static List<GetPage> routes = [
@@ -22,5 +24,6 @@ class AppRoute {
     GetPage(name: signIn, page: () => const SignInScreen()),
     GetPage(name: verification, page: () => const VerificationScreen()),
     GetPage(name: roleSelection, page: () => const RoleSelectionScreen()),
+    GetPage(name: sportsSelection, page: () => const SportsSelectionScreen()),
   ];
 }
