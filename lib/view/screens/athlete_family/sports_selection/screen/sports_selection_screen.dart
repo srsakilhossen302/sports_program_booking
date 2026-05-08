@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../../../../core/app_route.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../controller/sports_selection_controller.dart';
 
@@ -240,7 +241,7 @@ class SportsSelectionScreen extends StatelessWidget {
                               height: 60.h,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  // Navigate to next step
+                                  Get.toNamed(AppRoute.identity);
                                 },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.white,
